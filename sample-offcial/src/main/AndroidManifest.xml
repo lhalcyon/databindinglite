@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".SimpleUsageActivity">
         </activity>
+        <activity android:name=".EventUsageActivity">
+        </activity>
     </application>
 
 </manifest>

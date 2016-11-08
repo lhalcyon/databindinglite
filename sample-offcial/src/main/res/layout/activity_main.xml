@@ -4,9 +4,6 @@
     >
 
     <data>
-        <variable
-            name="area"
-            type="com.example.sample.model.Area"/>
     </data>
 
 
@@ -22,9 +19,18 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="com.example.sample.MainActivity">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{area.name}"/>
+        <Button
+            android:onClick="simpleUsage"
+            android:textAllCaps="false"
+            android:text="simpleUsage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:textAllCaps="false"
+            android:onClick="eventUsage"
+            android:text="eventUsage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </layout>
