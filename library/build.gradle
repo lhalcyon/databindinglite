@@ -19,6 +19,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
@@ -27,5 +31,13 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.0.0'
+
+    // Optional dependencies for extensions
+    // Picasso
+    provided 'com.squareup.picasso:picasso:[2.4.0, 2.5.2)'
+    // Glide
+    provided 'com.github.bumptech.glide:glide:[3.5.0, 3.7.0)'
+    provided 'com.nostra13.universalimageloader:universal-image-loader:[1.9.2, 1.9.5)'
+
     testCompile 'junit:junit:4.12'
 }
