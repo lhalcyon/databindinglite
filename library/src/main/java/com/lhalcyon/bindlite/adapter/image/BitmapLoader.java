@@ -1,8 +1,5 @@
 package com.lhalcyon.bindlite.adapter.image;
 
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.widget.ImageView;
 
 /**
@@ -14,11 +11,13 @@ import android.widget.ImageView;
 public interface BitmapLoader {
 
 
-    void load(
+    /*void load(
             @Nullable Object model,
             @NonNull ImageView target,
             @DrawableRes int placeholder,
             @DrawableRes int error
-    );
+    );*/
+
+    void load(String url,ImageView target);
 
 }

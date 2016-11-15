@@ -12,9 +12,13 @@ import com.lhalcyon.bindlite.utils.LoaderUtil;
  */
 
 public class ViewBindingAdapter {
-
-    @BindingAdapter(value = {"uri","placeholder","error","memory","diskCache"}, requireAll = false)
-    public static void setImageUri(Object model,final ImageView target,int placeHolder,int error){
-        LoaderUtil.resolveBitmapLoader().load(model,target,placeHolder,error);
+    @BindingAdapter("url")
+    public static void load(final ImageView target,String url){
+        LoaderUtil.resolveBitmapLoader().load(url,target);
     }
+
+   /* @BindingAdapter(value = {"url","placeholder","error"}, requireAll = false)
+    public static void setImageUrl(final ImageView target,String url, int placeHolder, int error){
+        LoaderUtil.resolveBitmapLoader().load(url,target,placeHolder,error);
+    }*/
 }

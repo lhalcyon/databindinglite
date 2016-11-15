@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="url" format="string" />
+
+    <declare-styleable name="ImageView">
+        <!--  load bitmap from uri(string type) -->
+        <attr name="url" />
+    </declare-styleable>
+</resources>
