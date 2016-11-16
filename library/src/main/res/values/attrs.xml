@@ -2,9 +2,12 @@
 <resources>
 
     <attr name="url" format="string" />
-
+    <attr name="placeholder" format="reference|color"/>
+    <attr name="error" format="reference"/>
     <declare-styleable name="ImageView">
         <!--  load bitmap from uri(string type) -->
         <attr name="url" />
+        <attr name="placeholder"/>
+        <attr name="error"/>
     </declare-styleable>
 </resources>

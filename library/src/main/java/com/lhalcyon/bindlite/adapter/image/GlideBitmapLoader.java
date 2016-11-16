@@ -22,11 +22,14 @@ public class GlideBitmapLoader implements BitmapLoader {
         this.mTransformation = transformation;
     }*/
 
+
     @Override
-    public void load(String url, ImageView target) {
+    public void load(ImageView target, String url, int placeHolder, int error) {
         Glide
                 .with(target.getContext())
                 .load(url)
+                .placeholder(placeHolder)
+                .error(error)
                 .into(target);
     }
 

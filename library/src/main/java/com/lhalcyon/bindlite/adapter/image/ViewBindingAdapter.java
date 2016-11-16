@@ -12,9 +12,14 @@ import com.lhalcyon.bindlite.utils.LoaderUtil;
  */
 
 public class ViewBindingAdapter {
-    @BindingAdapter("url")
+    /*@BindingAdapter("url")
     public static void load(final ImageView target,String url){
-        LoaderUtil.resolveBitmapLoader().load(url,target);
+        LoaderUtil.resolveBitmapLoader().load(target,url);
+    }*/
+
+    @BindingAdapter(value={"url","placeholder","error"},requireAll = false)
+    public static void load(final ImageView target,String url,int placeHolder,int error){
+        LoaderUtil.resolveBitmapLoader().load(target,url,placeHolder,error);
     }
 
    /* @BindingAdapter(value = {"url","placeholder","error"}, requireAll = false)
