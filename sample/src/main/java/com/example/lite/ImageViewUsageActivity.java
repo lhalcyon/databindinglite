@@ -8,6 +8,7 @@ import com.bumptech.glide.Glide;
 import com.example.lite.databinding.ActivityImageViewUsageBinding;
 import com.example.lite.event.ChangeEvent;
 import com.example.lite.model.User;
+import com.squareup.picasso.Picasso;
 
 public class ImageViewUsageActivity extends AppCompatActivity {
 
@@ -31,6 +32,11 @@ public class ImageViewUsageActivity extends AppCompatActivity {
                 .placeholder(R.mipmap.ic_launcher)
                 .error(R.mipmap.error)
                 .into(binding.iv3);
+        Picasso.with(this)
+                .load(res[0])
+                .placeholder(R.mipmap.ic_launcher)
+                .error(R.mipmap.error)
+                .into(binding.iv4);
 
     }
 }
