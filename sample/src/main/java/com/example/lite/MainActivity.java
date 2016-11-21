@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.lite.ui.image.ImageViewUsageActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

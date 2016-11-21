@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <attr name="url" format="string" />
+    <attr name="url" format="string"/>
     <attr name="placeholder" format="reference|color"/>
     <attr name="error" format="reference"/>
+    <attr name="transform" format="enum">
+        <enum name="square" value="0"/>
+        <enum name="circle" value="1"/>
+    </attr>
+    <attr name="scaleType" format="enum">
+        <enum name="fitCenter" value="0"/>
+        <enum name="centerCrop" value="1"/>
+    </attr>
     <declare-styleable name="ImageView">
         <!--  load bitmap from uri(string type) -->
-        <attr name="url" />
+        <attr name="url"/>
         <attr name="placeholder"/>
         <attr name="error"/>
+        <attr name="transform"/>
+        <attr name="scaleType"/>
     </declare-styleable>
 </resources>

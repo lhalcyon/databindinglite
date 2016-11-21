@@ -10,5 +10,5 @@ import android.widget.ImageView;
 
 public interface BitmapLoader {
 
-    void load(ImageView target,String url,int placeHolder,int error);
+    void load(ImageView target,String url,int placeHolder,int error,int shape,int scaleType);
 }
