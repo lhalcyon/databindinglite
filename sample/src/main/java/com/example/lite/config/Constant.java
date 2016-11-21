@@ -15,4 +15,8 @@ public interface Constant {
     String[] IMAGE_RES = new String[]{
             IMAGE_ERROR, IMAGE_1, IMAGE_2
     };
+
+    String[] IMAGE_NAME = new String[]{
+            "NULL","IMAGE1","IMAGE2"
+    };
 }

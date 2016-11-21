@@ -12,6 +12,8 @@ import com.bumptech.glide.Glide;
 import com.example.lite.R;
 import com.example.lite.config.Constant;
 import com.example.lite.databinding.FragmentGlideBinding;
+import com.example.lite.event.ChangeEvent;
+import com.example.lite.model.User;
 
 /**
  * ©2016-2017 kmhealthcloud.All Rights Reserved <p/>
@@ -20,7 +22,7 @@ import com.example.lite.databinding.FragmentGlideBinding;
  */
 
 public class GlideImageFragment extends Fragment {
-
+    private User mUser;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -39,6 +41,11 @@ public class GlideImageFragment extends Fragment {
                 .with(this)
                 .load(Constant.IMAGE_1)
                 .into(binding.iv3);
+
+        mUser = new User("Arthas",Constant.IMAGE_1);
+        ChangeEvent event = new ChangeEvent(mUser);
+        binding.setUser(mUser);
+        binding.setEvent(event);
         return binding.getRoot();
     }
 }

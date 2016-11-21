@@ -13,9 +13,9 @@ import com.lhalcyon.bindlite.utils.LoaderUtil;
 
 public class ViewBindingAdapter {
 
-    @BindingAdapter(value = {"url", "placeholder", "error", "shape", "scaleType"}, requireAll = false)
-    public static void load(final ImageView target, String url, int placeHolder, int error, int shape, int scaleType) {
-        LoaderUtil.resolveBitmapLoader().load(target, url, placeHolder, error, shape, scaleType);
+    @BindingAdapter(value = {"url", "placeholder", "error", "transform", "scaleType"}, requireAll = false)
+    public static void load(final ImageView target, String url, int placeHolder, int error, int transform, int scaleType) {
+        LoaderUtil.resolveBitmapLoader().load(target, url, placeHolder, error, transform, scaleType);
     }
 
 }

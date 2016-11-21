@@ -3,7 +3,7 @@
 
     <attr name="url" format="string"/>
     <attr name="placeholder" format="reference|color"/>
-    <attr name="error" format="reference"/>
+    <attr name="error" format="reference|integer"/>
     <attr name="transform" format="enum">
         <enum name="square" value="0"/>
         <enum name="circle" value="1"/>
