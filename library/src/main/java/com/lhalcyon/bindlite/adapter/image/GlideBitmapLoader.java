@@ -20,22 +20,19 @@ public class GlideBitmapLoader implements BitmapLoader {
     public GlideBitmapLoader() {
     }
 
-
     @Override
-    public void load(ImageView target, String url, int placeHolder, int error, int shape, int scaleType) {
+    public void load(ImageView target, String url, int placeHolder, int error, BitmapShape shape, ScaleType scaleType) {
         DrawableRequestBuilder<String> builder = Glide
                 .with(target.getContext())
                 .load(url)
                 .placeholder(placeHolder)
                 .error(error);
-        if(BitmapShape.CIRCLE.getValue() == shape){
-            builder = builder.transform(new GlideCircleTransform(target.getContext()));
-        }
-        if(ScaleType.CenterCrop.getValue() == scaleType){
+        if(ScaleType.CenterCrop == scaleType){
             builder = builder.centerCrop();
+        }
+        if(BitmapShape.CIRCLE == shape){
+            builder = builder.transform(new GlideCircleTransform(target.getContext()));
         }
         builder.into(target);
     }
-
-
 }

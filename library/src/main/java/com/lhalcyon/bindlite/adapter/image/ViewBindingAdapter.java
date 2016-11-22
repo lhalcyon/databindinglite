@@ -3,6 +3,8 @@ package com.lhalcyon.bindlite.adapter.image;
 import android.databinding.BindingAdapter;
 import android.widget.ImageView;
 
+import com.lhalcyon.bindlite.adapter.image.config.BitmapShape;
+import com.lhalcyon.bindlite.adapter.image.config.ScaleType;
 import com.lhalcyon.bindlite.utils.LoaderUtil;
 
 /**
@@ -13,8 +15,19 @@ import com.lhalcyon.bindlite.utils.LoaderUtil;
 
 public class ViewBindingAdapter {
 
-    @BindingAdapter(value = {"url", "placeholder", "error", "transform", "scaleType"}, requireAll = false)
-    public static void load(final ImageView target, String url, int placeHolder, int error, int transform, int scaleType) {
+    @BindingAdapter(value = {
+            "url",
+            "placeholder",
+            "error",
+            "transform",
+            "scaleType"
+    }, requireAll = false)
+    public static void load(final ImageView target,
+                            String url,
+                            int placeHolder,
+                            int error,
+                            BitmapShape transform,
+                            ScaleType scaleType) {
         LoaderUtil.resolveBitmapLoader().load(target, url, placeHolder, error, transform, scaleType);
     }
 

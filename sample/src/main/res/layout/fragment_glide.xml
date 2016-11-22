@@ -13,14 +13,6 @@
             name="event"
             type="com.example.lite.event.ChangeEvent"/>
 
-        <!--<variable
-            name="scaleType"
-            type="com.lhalcyon.bindlite.adapter.image.config.ScaleType"/>
-
-        <variable
-            name="shape"
-            type="com.lhalcyon.bindlite.adapter.image.config.BitmapShape"/>-->
-
         <import type="com.lhalcyon.bindlite.adapter.image.config.BitmapShape"/>
         <import type="com.lhalcyon.bindlite.adapter.image.config.ScaleType"/>
         <import type="com.example.lite.R"/>
@@ -37,7 +29,19 @@
             android:layout_margin="@dimen/activity_vertical_margin"
             android:orientation="vertical">
 
-            <LinearLayout
+            <TextView
+                android:gravity="center"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:textColor="#fff"
+                android:text="Glide load below"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center">
@@ -48,16 +52,19 @@
                     android:layout_height="80dp"/>
 
                 <TextView
+                    android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentRight="true"
                     android:text="CenterCrop"
                     android:textColor="#9f9f3f"/>
 
 
-            </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center">
@@ -69,15 +76,19 @@
                     />
 
                 <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="FitCenter"
                     android:textColor="#9f9f3f"/>
 
-            </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center">
@@ -89,14 +100,28 @@
                     />
 
                 <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="Default"
                     android:textColor="#9f9f3f"/>
-            </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <TextView
+                android:gravity="center"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:textColor="#fff"
+                android:text="databinding Glide load below"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center">
@@ -112,15 +137,47 @@
                     />
 
                 <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="@{user.mName}"
+                    android:text="CenterCrop Circle"
                     android:textColor="#9f9f3f"/>
 
-            </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:error="@{R.mipmap.error}"
+                    app:placeholder="@{R.mipmap.ic_launcher}"
+                    app:scaleType="@{ScaleType.CenterCrop}"
+                    app:transform="@{BitmapShape.SQUARE}"
+                    app:url="@{user.mAvatar}"
+                    />
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="CenterCrop Square"
+                    android:textColor="#9f9f3f"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center">
@@ -136,13 +193,44 @@
                     />
 
                 <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="@{user.mName}"
+                    android:text="FitCenter Square"
                     android:textColor="#9f9f3f"/>
 
-            </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:error="@{R.mipmap.error}"
+                    app:placeholder="@{R.mipmap.ic_launcher}"
+                    app:scaleType="@{ScaleType.FitCenter}"
+                    app:transform="@{BitmapShape.CIRCLE}"
+                    app:url="@{user.mAvatar}"
+                    />
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="FitCenter Circle"
+                    android:textColor="#9f9f3f"/>
+
+            </RelativeLayout>
+
 
             <Button
                 android:text="change"
@@ -150,6 +238,9 @@
                 android:onClick="@{event::onChange}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="100dp"/>
 
         </LinearLayout>
     </ScrollView>
