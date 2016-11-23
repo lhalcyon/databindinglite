@@ -13,11 +13,15 @@ public class BitmapLoaderFactory {
     }
 
     public static BitmapLoader picasso() {
-        return null;
+        return PicassoSingleton.singleton;
     }
 
     public static BitmapLoader imageLoader() {
         return null;
+    }
+
+    private static class PicassoSingleton{
+        private static final PicassoBitmapLoader singleton = new PicassoBitmapLoader();
     }
 
     private static class GlideSingleton {
