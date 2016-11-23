@@ -17,7 +17,11 @@ public class BitmapLoaderFactory {
     }
 
     public static BitmapLoader imageLoader() {
-        return null;
+        return ImageLoaderSingleton.singleton;
+    }
+
+    private static class ImageLoaderSingleton{
+        private static final ImageBitmapLoader singleton = new ImageBitmapLoader();
     }
 
     private static class PicassoSingleton{
