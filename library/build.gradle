@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 25
@@ -40,4 +41,13 @@ dependencies {
     provided 'com.nostra13.universalimageloader:universal-image-loader:[1.9.2, 1.9.5)'
 
     testCompile 'junit:junit:4.12'
+}
+
+publish {
+    userOrg = 'lhalcyon'
+    groupId = 'com.lhalcyon'
+    artifactId = 'databindinglite'
+    publishVersion = '1.0.0'
+    desc = 'databinding tools'
+    website = 'https://github.com/lhalcyon/databindinglite'
 }
