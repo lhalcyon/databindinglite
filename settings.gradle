@@ -1,1 +1,1 @@
-include ':sample', ':library'
+include ':sample-picasso', ':library', ':sample-glide', ':sample-imageloader'
