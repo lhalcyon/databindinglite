@@ -35,7 +35,8 @@ public class ImageBitmapLoader implements BitmapLoader {
         if(shape == BitmapShape.CIRCLE){
             builder = builder.displayer(new CircleDisplayer());
         }
-        DisplayImageOptions options = builder.build();
+        DisplayImageOptions options = builder
+                .build();
         ImageLoader.getInstance().displayImage(url,target,options);
     }
 }
