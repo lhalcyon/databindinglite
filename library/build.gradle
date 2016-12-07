@@ -47,7 +47,7 @@ publish {
     userOrg = 'lhalcyon'
     groupId = 'com.lhalcyon'
     artifactId = 'databindinglite'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     desc = 'databinding tools'
     website = 'https://github.com/lhalcyon/databindinglite'
 }
