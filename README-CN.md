@@ -1,13 +1,13 @@
 # databindinglite
-[中文版](https://github.com/lhalcyon/databindinglite/blob/master/README-CN.md)
-
-A  Databinding tool for `ImageView` .It supports image auto loading  via [ImageLoader](https://github.com/nostra13/Android-Universal-Image-Loader),[Picasso](https://github.com/square/picasso) or [Glide](https://github.com/bumptech/glide),depending on which you use in your app.
 
 
+一款轻量级的 `ImageView` Databinding工具.支持通过 [ImageLoader](https://github.com/nostra13/Android-Universal-Image-Loader),[Picasso](https://github.com/square/picasso) 或 [Glide](https://github.com/bumptech/glide)自动加载图片.具体视其在应用在应用中被使用到了
 
-### Download
 
-Grab via Maven:
+
+### 下载
+
+通过 Maven:
 
 ```xml
 <dependency>
@@ -18,7 +18,7 @@ Grab via Maven:
 </dependency>
 ```
 
-or Gradle:
+或 Gradle:
 
 ```groovy
 compile 'com.lhalcyon:databindinglite:1.0.1'
@@ -26,7 +26,7 @@ compile 'com.lhalcyon:databindinglite:1.0.1'
 
 
 
-### Usage
+### 使用
 
 ```xml
 <ImageView
@@ -40,22 +40,22 @@ compile 'com.lhalcyon:databindinglite:1.0.1'
                     />
 ```
 
-__Don't forget__ import related class.  eg:
+__不要忘记__ 导入相关的类.  例如:
 
-to config `scaleType`, need 
+配置 `scaleType`, 需要
 
 ```xml
 <import type="com.lhalcyon.bindlite.adapter.image.config.ScaleType"/>
 ```
 
-to config `transform`, need
+配置 `transform`, 需要
 
 ```xml
 <import type="com.lhalcyon.bindlite.adapter.image.config.BitmapShape"/>
 ```
 
-__Note that__ once `transform` is configed,`scaleType` will not work. 
+__注意__ 一旦 `transform` 被设置为非默认,`scaleType` 将不会有效果. 
 
 
 
-for further details ,you may see samples for help:)
+可以参考samples了解更多细节:)
