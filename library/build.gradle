@@ -28,11 +28,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.0.0'
-
     // Optional dependencies for extensions
     // Picasso
     provided 'com.squareup.picasso:picasso:[2.4.0, 2.5.2)'
@@ -47,7 +42,7 @@ publish {
     userOrg = 'lhalcyon'
     groupId = 'com.lhalcyon'
     artifactId = 'databindinglite'
-    publishVersion = '1.0.1'
+    publishVersion = '1.0.2'
     desc = 'databinding tools'
     website = 'https://github.com/lhalcyon/databindinglite'
 }
